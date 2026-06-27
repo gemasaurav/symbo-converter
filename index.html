@@ -1,1 +1,47 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbo Converter v1.0</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Symbo Converter</h1>
+
+    <p class="subtitle">
+        Designed & Created by <b>100, 000 000 000</b>
+    </p>
+
+    <textarea
+        id="inputText"
+        placeholder="Type English text here...">
+    </textarea>
+
+    <br>
+
+    <button onclick="convertText()">
+        Convert
+    </button>
+
+    <button onclick="clearText()">
+        Clear
+    </button>
+
+    <h2>Converted Symbols</h2>
+
+    <div id="output"></div>
+
+</div>
+
+<script src="mapping.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
