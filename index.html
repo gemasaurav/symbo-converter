@@ -3,34 +3,44 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+    <title>Symbo Converter</title>
 
-<title>Symbo Converter</title>
-
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<!-- Splash Screen -->
+    <div class="container">
 
-<div id="splash">
+        <h1>Symbo Converter</h1>
 
-<img src="logo.png" id="logo">
+        <textarea
+            id="inputText"
+            placeholder="Enter Text Here"></textarea>
 
-<h1>SYMBO CONVERTER</h1>
+        <textarea
+            id="outputText"
+            placeholder="Converted Text"
+            readonly></textarea>
 
-<h2>Created & Designed by</h2>
+        <div class="buttons">
 
-<h3>100,000,000,000</h3>
+            <button id="convertBtn">Convert</button>
 
-</div>
+            <button id="copyBtn">Copy</button>
 
-<script src="script.js"></script>
+            <button id="clearBtn">Clear</button>
+
+        </div>
+
+    </div>
+
+    <script src="mapping.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
