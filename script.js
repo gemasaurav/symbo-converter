@@ -139,3 +139,85 @@ function renderSymbo(text){
     }
 
 }
+// ======================================================
+// SYMBO CONVERTER V1.0
+// PART 2
+// ======================================================
+
+// =====================================
+// Render English Text
+// =====================================
+
+function renderEnglish(text){
+
+    outputArea.innerHTML="";
+
+    hiddenOutput=text;
+
+    outputArea.textContent=text;
+
+}
+
+// =====================================
+// Decode Hidden Text
+// =====================================
+
+function decodeHidden(text){
+
+    let result="";
+
+    for(let ch of text){
+
+        if(reverseDigitMap[ch]){
+
+            result+=reverseDigitMap[ch];
+
+        }
+
+        else{
+
+            result+=ch;
+
+        }
+
+    }
+
+    return result;
+
+}
+
+// =====================================
+// Convert Button
+// =====================================
+
+convertBtn.addEventListener("click",function(){
+
+    let input=inputBox.value.trim();
+
+    if(input===""){
+
+        alert("Please enter some text.");
+
+        inputBox.focus();
+
+        return;
+
+    }
+
+    // English → Symbo
+
+    if(isEnglishInput(input)){
+
+        renderSymbo(input);
+
+    }
+
+    // Symbo → English
+
+    else{
+
+        renderEnglish(decodeHidden(input));
+
+    }
+
+});
